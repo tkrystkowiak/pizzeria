@@ -1,0 +1,10 @@
+<h2>Pastas</h2>
+
+<ul class="pastas">
+  <li *ngFor="let pasta of pastas">
+    <a routerLink="/detail/{{pasta.id}}">
+      <span class="badge">{{pasta.id}}</span> {{pasta.name}}
+    </a>
+    <button (click)="addToCart(pasta)">+</button>
+  </li>
+</ul>

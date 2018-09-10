@@ -1,0 +1,11 @@
+<h2>Cart</h2>
+
+<ul class="cart">
+  <li *ngFor="let dish of dishes">
+    <a routerLink="/cart">
+      <span class="badge">{{dish.id}}</span> {{dish.name}}
+    </a>
+    <button (click)="remove(dish)">-</button>
+  </li>
+  <button routerLink="/address">Order</button>
+</ul>

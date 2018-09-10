@@ -1,0 +1,40 @@
+<div class="body">
+  <div class="container" >
+    <h1 [hidden]="submitted">Deliviery Addres</h1>
+    <h1 [hidden]="!submitted">Thank you for your order</h1>
+    <form [hidden]="submitted" (ngSubmit)="onSubmit()" #addressForm="ngForm">
+      <div class="form-group">
+        <label for="firstname">First name</label>
+        <input type="text" id="firstname" required [(ngModel)]="model.firstName" name="firstname">
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Last name</label>
+        <input type="text" id="lastname" required [(ngModel)]="model.lastName" name="lastname">
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" required [(ngModel)]="model.city" name="city">
+      </div>
+
+      <div class="form-group">
+        <label for="street">Street</label>
+        <input type="text" id="street" required [(ngModel)]="model.street" name="street">
+      </div>
+
+      <div class="form-group">
+        <label for="apartment">Apartment</label>
+        <input type="text" id="apartment" required [(ngModel)]="model.apartment" name="apartment">
+      </div>
+
+      <div class="form-group">
+        <label for="apartment">Floor</label>
+        <input type="text" id="floor" optional [(ngModel)]="model.floor" name="floor">
+      </div>
+
+      <button type="submit" [disabled]="!addressForm.form.valid">Order</button>
+
+    </form>
+  </div>
+</div>

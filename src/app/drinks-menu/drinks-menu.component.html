@@ -1,0 +1,10 @@
+<h2>Drinks</h2>
+
+<ul class="drinks">
+  <li *ngFor="let drink of drinks">
+    <a routerLink="/detail/{{drink.id}}">
+      <span class="badge">{{drink.id}}</span> {{drink.name}}
+    </a>
+    <button (click)="addToCart(drink)">+</button>
+  </li>
+</ul>

@@ -1,0 +1,46 @@
+.body{
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-left: 5px solid #a94442; /* red */
+}
+
+.ng-valid[optional],.ng-valid.optional{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+button[type=submit] {
+  //background-color: #4CAF50;
+  //color: white;
+  padding: 12px 20px;
+  border: none;
+  margin-top: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}

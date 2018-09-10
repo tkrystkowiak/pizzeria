@@ -1,0 +1,12 @@
+<h2>Dishes</h2>
+
+<ul class="dishes">
+  <li *ngFor="let dish of dishes"
+      [class.selected]="dish === selectedDish"
+      (click)="onSelect(dish)">
+    <a routerLink="/detail/{{dish.id}}">
+      <span class="badge">{{dish.id}}</span> {{dish.name}}
+    </a>
+  </li>
+</ul>
+
