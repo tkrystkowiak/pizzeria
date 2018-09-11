@@ -1,7 +1,9 @@
 .top_bar {
   display:flex;
   justify-content: flex-end;
-  background-color: indianred;
+  min-width: 100%;
+  min-height: 30px;
+  background-color: #313638;
 }
 /* Style the tab */
 .tab {
@@ -38,3 +40,5 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+

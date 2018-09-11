@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Drink} from '../Drink';
 import {DishService} from '../dish.service';
 import {Dish} from '../Dish';
 import {CartService} from '../cart.service';
@@ -11,7 +10,7 @@ import {CartService} from '../cart.service';
 })
 export class DrinksMenuComponent implements OnInit {
 
-  drinks: Drink[];
+  drinks: Dish[];
 
   constructor(private dishService: DishService, private cartService: CartService) { }
 

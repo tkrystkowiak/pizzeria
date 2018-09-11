@@ -23,9 +23,10 @@ export class AddressComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    let order = new Order();
+    const order = new Order();
     order.address = this.model;
-    let dishes = [];
+    order.date = Date.now();
+    const dishes = [];
     this.cartService.getCart().forEach(dish => dishes.push(dish.id));
     order.dishes = dishes;
     this.orderService.save(order).subscribe();

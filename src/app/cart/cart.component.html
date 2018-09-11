@@ -1,6 +1,8 @@
-<h2>Cart</h2>
 
-<ul class="cart">
+<div class="body">
+  <div class="container">
+<ul class="dishes">
+  <h2>Cart</h2>
   <li *ngFor="let dish of dishes">
     <a routerLink="/cart">
       <span class="badge">{{dish.id}}</span> {{dish.name}}
@@ -9,3 +11,5 @@
   </li>
   <button routerLink="/address">Order</button>
 </ul>
+  </div>
+</div>

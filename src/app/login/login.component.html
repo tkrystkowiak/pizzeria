@@ -1,7 +1,19 @@
-<form>
-  Login:<br>
-  <input type="text" name="login"><br>
-  Password:<br>
-  <input type="text" name="password"><br>
-</form>
+<div class="body">
+  <div class="container">
+    <h1 [hidden]="!loginService.isAuthenticated">You are now logged in</h1>
+    <form [hidden]="loginService.isAuthenticated" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="login">Login</label>
+        <input type="text" id="login" required [(ngModel)]="login" name="login">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" id="password" required [(ngModel)]="password" name="password">
+      </div>
+
+      <button type="submit" [disabled]="!loginForm.form.valid">Log in</button>
+    </form>
+  </div>
+</div>
 

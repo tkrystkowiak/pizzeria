@@ -1,0 +1,12 @@
+.body{
+  display:flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex: 0 0 600px;
+  max-width: 600px;
+  background-color: #E0DFD5;
+  justify-content: center;
+}

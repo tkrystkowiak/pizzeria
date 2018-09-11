@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule }   from '@angular/forms';
 import { DishDetailComponent } from './dish-detail/dish-detail.component';
 import { DishListComponent } from './dish-list/dish-list.component';
+import { OrderListComponent } from './order-list/order-list.component';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { DishListComponent } from './dish-list/dish-list.component';
     AddressComponent,
     LoginComponent,
     DishDetailComponent,
-    DishListComponent
+    DishListComponent,
+    OrderListComponent,
+    OrderDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Drink} from './Drink';
-import {Pasta} from './Pasta';
-import {Pizza} from './Pizza';
 import {Dish} from './Dish';
 
 @Injectable({

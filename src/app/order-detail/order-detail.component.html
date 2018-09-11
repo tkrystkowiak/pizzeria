@@ -1,0 +1,22 @@
+<div class="body">
+  <div class="container">
+    <div *ngIf="order">
+      <p>Name: {{order.address.firstName}} {{order.address.lastName}}</p>
+      <p>City: {{order.address.city}}</p>
+      <p>Street:{{order.address.lastName}}</p>
+      <p>Apartment:{{order.address.apartment}}</p>
+      <p>Floor:{{order.address.floor}}</p>
+    </div>
+    <table>
+      <tr>
+        <th>No.</th>
+      </tr>
+      <div *ngFor="let dish of order.dishes">
+        <tr>
+          <td>{{dish}}</td>
+        </tr>
+      </div>
+    </table>
+    <button (click)="deleteOrder()" routerLink="/orders/"></button>
+  </div>
+</div>

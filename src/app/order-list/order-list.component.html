@@ -1,0 +1,19 @@
+<div class="body">
+  <div class="container">
+    <h2>Orders</h2>
+    <table class="menu">
+      <colgroup>
+        <col class="id">
+        <col class="address">
+        <col class="dishes">
+      </colgroup>
+      <tr *ngFor="let order of orders" routerLink="/order-detail/{{order.id}}">
+
+        <td >{{order.id}}</td>
+        <td >{{order.address.city}}, {{order.address.street}} {{order.address.apartment}}</td>
+        <td >{{order.dishes}} </td>
+
+      </tr>
+    </table>
+</div>
+</div>

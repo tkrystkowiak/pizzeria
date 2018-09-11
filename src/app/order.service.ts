@@ -23,4 +23,16 @@ export class OrderService {
     return this.http.post<Order>('/api/orders', order, httpOptions);
   }
 
+  getAll(): Observable<Order[]> {
+    return this.http.get<Order[]>('/api/orders');
+  }
+
+  getOne(id: number): Observable<Order> {
+    return this.http.get<Order>('/api/orders/' + id);
+  }
+
+  deleteOne(id: number): Observable<Order> {
+    return this.http.delete<Order>('/api/orders/' + id);
+  }
+
 }

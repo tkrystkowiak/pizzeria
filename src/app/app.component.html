@@ -1,10 +1,13 @@
 <div class="top_bar">
-  <button routerLink="/cart">cart</button>
-  <button routerLink="/login">login</button>
+  <button [hidden]="loginService.isAuthenticated" routerLink="/cart">cart</button>
+  <button [hidden]="loginService.isAuthenticated" routerLink="/login">login</button>
+  <button [hidden]="!loginService.isAuthenticated" (click)="loginService.logout()" routerLink="/">logout</button>
 </div>
 <nav class="tab">
-  <button routerLink="/pizzas">Pizzas</button>
-  <button routerLink="/pastas">Pastas</button>
-  <button routerLink="/drinks">Drinks</button>
+  <button [hidden]="loginService.isAuthenticated" routerLink="/pizzas">Pizzas</button>
+  <button [hidden]="loginService.isAuthenticated" routerLink="/pastas">Pastas</button>
+  <button [hidden]="loginService.isAuthenticated" routerLink="/drinks">Drinks</button>
+  <button [hidden]="!loginService.isAuthenticated" routerLink="/dishes">Dishes</button>
+  <button [hidden]="!loginService.isAuthenticated" routerLink="/orders">Orders</button>
 </nav>
 <router-outlet></router-outlet>

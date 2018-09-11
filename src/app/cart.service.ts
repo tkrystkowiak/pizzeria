@@ -10,7 +10,7 @@ export class CartService {
 
   cart: Dish[];
 
-  constructor(readonly http: HttpClient) {
+  constructor(private http: HttpClient) {
     this.cart = [];
   }
 
@@ -23,7 +23,7 @@ export class CartService {
   }
 
   remove(dish: Dish): void {
-    let index = this.cart.indexOf(dish, 0);
+    const index = this.cart.indexOf(dish, 0);
     if (index > -1) {
       this.cart.splice(index, 1);
     }

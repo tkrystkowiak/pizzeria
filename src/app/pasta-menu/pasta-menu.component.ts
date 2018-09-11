@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Pasta} from '../Pasta';
 import {DishService} from '../dish.service';
 import {Dish} from '../Dish';
 import {CartService} from '../cart.service';
@@ -12,7 +11,7 @@ import {CartService} from '../cart.service';
 })
 export class PastaMenuComponent implements OnInit {
 
-  pastas: Pasta[];
+  pastas: Dish[];
 
   constructor(private dishService: DishService, private cartService: CartService) { }
 
@@ -23,6 +22,7 @@ export class PastaMenuComponent implements OnInit {
   getPastas(): void {
     this.dishService.getPastas()
       .subscribe(pastas => this.pastas = pastas);
+    const pastasTest = this.pastas;
   }
 
   addToCart(dish: Dish): void {

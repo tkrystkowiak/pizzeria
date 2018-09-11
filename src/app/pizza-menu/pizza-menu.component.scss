@@ -1,10 +1,24 @@
-.pizzas {
+.body{
+  display:flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex: 0 0 500px;
+  max-width: 500px;
+  background-color: #E0DFD5;
+  justify-content: center;
+
+}
+
+.dishes {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
 }
-.pizzas li {
+.dishes li {
   position: relative;
   cursor: pointer;
   display: flex;
@@ -16,13 +30,13 @@
   border-radius: 4px;
 }
 
-.pizzas li:hover {
+.dishes li:hover {
   color: #607D8B;
   background-color: #DDD;
   left: .1em;
 }
 
-.pizzas a {
+.dishes a {
   color: #888;
   text-decoration: none;
   position: relative;
@@ -30,11 +44,11 @@
   width: 250px;
 }
 
-.pizzas a:hover {
+.dishes a:hover {
   color:#607D8B;
 }
 
-.pizzas .badge {
+.dishes .badge {
   display: inline-block;
   font-size: small;
   color: white;
@@ -50,3 +64,4 @@
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
 }
+

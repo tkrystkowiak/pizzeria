@@ -8,6 +8,8 @@ import {AddressComponent} from './address/address.component';
 import {LoginComponent} from './login/login.component';
 import {DishListComponent} from './dish-list/dish-list.component';
 import {DishDetailComponent} from './dish-detail/dish-detail.component';
+import {OrderDetailComponent} from './order-detail/order-detail.component';
+import {OrderListComponent} from './order-list/order-list.component';
 
 const routes: Routes = [{path: 'pizzas', component: PizzaMenuComponent},
     {path: 'pastas', component: PastaMenuComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [{path: 'pizzas', component: PizzaMenuComponent},
     {path: 'address', component: AddressComponent},
     {path: 'login', component: LoginComponent},
     {path: 'dishes', component: DishListComponent},
-    {path: 'detail/:id', component: DishDetailComponent}];
+    {path: 'dish-detail/:id', component: DishDetailComponent},
+    {path: 'orders', component: OrderListComponent},
+    {path: 'order-detail/:id', component: OrderDetailComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

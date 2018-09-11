@@ -1,10 +1,18 @@
-<h2>Drinks</h2>
+<div class="body">
+<div class="container">
 
-<ul class="drinks">
+<ul class="dishes">
+  <h2>Drinks</h2>
   <li *ngFor="let drink of drinks">
     <a routerLink="/detail/{{drink.id}}">
-      <span class="badge">{{drink.id}}</span> {{drink.name}}
+      <span class="badge">{{drink.id}}</span>
+      <span class="description">
+        <span >{{drink.name}}  </span>
+        <span class="price">{{drink.price}} $</span>
+      </span>
     </a>
     <button (click)="addToCart(drink)">+</button>
   </li>
 </ul>
+</div>
+</div>
