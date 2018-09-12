@@ -1,18 +1,23 @@
 <div class="body">
 <div class="container">
-
-<ul class="dishes">
   <h2>Drinks</h2>
-  <li *ngFor="let drink of drinks">
-    <a routerLink="/detail/{{drink.id}}">
-      <span class="badge">{{drink.id}}</span>
-      <span class="description">
-        <span >{{drink.name}}  </span>
-        <span class="price">{{drink.price}} $</span>
-      </span>
-    </a>
-    <button (click)="addToCart(drink)">+</button>
-  </li>
-</ul>
+  <table class="menu">
+    <colgroup>
+      <col class="id">
+      <col class="name">
+      <col class="description">
+      <col class="price">
+      <col class="plus">
+    </colgroup>
+    <tr *ngFor="let drink of drinks">
+
+      <td>{{drink.id}}</td>
+      <td>{{drink.name}}</td>
+      <td>{{drink.description}}</td>
+      <td>{{drink.price}} $</td>
+      <td><button (click)="addToCart(drink)">+</button></td>
+
+    </tr>
+  </table>
 </div>
 </div>

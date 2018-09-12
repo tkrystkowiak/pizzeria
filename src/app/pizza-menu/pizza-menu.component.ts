@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DishService } from '../dish.service';
-import {CartService} from '../cart.service';
-import {Dish} from '../Dish';
+import { DishService } from '../services/dish.service';
+import {CartService} from '../services/cart.service';
+import {Dish} from '../models/Dish';
 
 @Component({
   selector: 'app-pizza-menu',

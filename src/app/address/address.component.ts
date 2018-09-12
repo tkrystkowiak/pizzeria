@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Address} from '../Address';
-import {CartService} from '../cart.service';
-import {OrderService} from '../order.service';
-import {Order} from '../Order';
+import {Address} from '../models/Address';
+import {CartService} from '../services/cart.service';
+import {OrderService} from '../services/order.service';
+import {Order} from '../models/Order';
 
 @Component({
   selector: 'app-address',

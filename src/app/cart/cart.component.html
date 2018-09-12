@@ -1,15 +1,21 @@
 
 <div class="body">
   <div class="container">
-<ul class="dishes">
-  <h2>Cart</h2>
-  <li *ngFor="let dish of dishes">
-    <a routerLink="/cart">
-      <span class="badge">{{dish.id}}</span> {{dish.name}}
-    </a>
-    <button (click)="remove(dish)">-</button>
-  </li>
-  <button routerLink="/address">Order</button>
-</ul>
+    <h2>Cart</h2>
+    <table class="menu">
+      <colgroup>
+        <col class="id">
+        <col class="name">
+        <col class="price">
+        <col class="minus">
+      </colgroup>
+      <tr *ngFor="let dish of dishes">
+        <td >{{dish.id}}</td>
+        <td >{{dish.name}}</td>
+        <td >{{dish.price}} $</td>
+        <td ><button (click)="remove(dish)">-</button></td>
+      </tr>
+    </table>
+    <button class="checkout" routerLink="/address">Checkout</button>
   </div>
 </div>

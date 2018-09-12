@@ -1,12 +1,21 @@
-<h2>Dishes</h2>
+<div class="body">
+  <div class="container">
+    <h2>Dishes</h2>
+    <table class="menu">
+      <colgroup>
+        <col class="id">
+        <col class="name">
+        <col class="price">
+        <col class="available">
+      </colgroup>
+      <tr *ngFor="let dish of dishes">
+        <td>{{dish.id}}</td>
+        <td>{{dish.name}}</td>
+        <td>{{dish.price}} $</td>
+        <td><label><input type="checkbox" checked (click)="">Available</label></td>
 
-<ul class="dishes">
-  <li *ngFor="let dish of dishes"
-      [class.selected]="dish === selectedDish"
-      (click)="onSelect(dish)">
-    <a routerLink="/detail/{{dish.id}}">
-      <span class="badge">{{dish.id}}</span> {{dish.name}}
-    </a>
-  </li>
-</ul>
+      </tr>
+    </table>
+  </div>
+</div>
 

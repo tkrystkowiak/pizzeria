@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Dish} from './Dish';
+import {Dish} from '../models/Dish';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,7 @@ export class DishService {
     return this.http.get<Dish[]>('/api/dishes?type=pizza');
   }
 
-  getDish(id: string): Observable<Dish> {
+  getDish(id: number): Observable<Dish> {
     return this.http.get<Dish>('/api/dishes/' + id);
   }
 

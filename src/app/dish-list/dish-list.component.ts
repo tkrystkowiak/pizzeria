@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Dish} from '../Dish';
-import {DishService} from '../dish.service';
+import {Dish} from '../models/Dish';
+import {DishService} from '../services/dish.service';
 
 @Component({
   selector: 'app-dish-list',
@@ -25,6 +25,10 @@ export class DishListComponent implements OnInit {
 
   getDishes(): void {
     this.dishService.getDishes().subscribe(dishes => this.dishes = dishes);
+  }
+
+  modifyAvailability(): void{
+    this.d
   }
 
 }

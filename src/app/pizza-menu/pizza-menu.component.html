@@ -1,14 +1,24 @@
 <div class="body">
   <div class="container">
-    <ul class="dishes">
-      <h2>Pizzas</h2>
-      <li *ngFor="let pizza of pizzas">
-        <a routerLink="/detail/{{pizza.id}}">
-          <span class="badge">{{pizza.id}}</span> {{pizza.name}}
-        </a>
-        <button (click)="addToCart(pizza)">+</button>
-      </li>
-    </ul>
+    <h2>Pizzas</h2>
+    <table class="menu">
+      <colgroup>
+        <col class="id">
+        <col class="name">
+        <col class="description">
+        <col class="price">
+        <col class="plus">
+      </colgroup>
+      <tr *ngFor="let pizza of pizzas">
+
+        <td>{{pizza.id}}</td>
+        <td>{{pizza.name}}</td>
+        <td>{{pizza.description}}</td>
+        <td>{{pizza.price}} $</td>
+        <td><button (click)="addToCart(pizza)">+</button></td>
+
+      </tr>
+    </table>
   </div>
 </div>
 

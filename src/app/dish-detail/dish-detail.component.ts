@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Dish} from '../Dish';
-import {DishService} from '../dish.service';
+import {Dish} from '../models/Dish';
+import {DishService} from '../services/dish.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -23,8 +23,8 @@ export class DishDetailComponent implements OnInit {
 
   getDish(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.dishService.getDish(id)
-      .subscribe(dish => this.dish = dish);
+    /*this.dishService.getDish(id)
+      .subscribe(dish => this.dish = dish);*/
   }
 
 }
