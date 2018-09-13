@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DishListComponent } from './dish-list.component';
+import {HttpClient, HttpHandler} from '@angular/common/http';
 
 describe('DishListComponent', () => {
   let component: DishListComponent;
@@ -8,7 +9,8 @@ describe('DishListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DishListComponent ]
+      declarations: [ DishListComponent ],
+      providers: [HttpClient, HttpHandler]
     })
     .compileComponents();
   }));

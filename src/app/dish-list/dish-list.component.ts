@@ -11,7 +11,7 @@ export class DishListComponent implements OnInit {
 
   dishes: Dish[];
 
-  selectedDish : Dish;
+  availability: boolean;
 
   constructor(private dishService: DishService) { }
 
@@ -19,16 +19,17 @@ export class DishListComponent implements OnInit {
     this.getDishes();
   }
 
-  onSelect(dish: Dish): void {
-    this.selectedDish = dish;
-  }
-
   getDishes(): void {
     this.dishService.getDishes().subscribe(dishes => this.dishes = dishes);
   }
 
-  modifyAvailability(): void{
-    this.d
+  modifyAvailability(dish: Dish): void {
+    if (dish.isAvailable === true) {
+      dish.isAvailable = false;
+    } else {
+      dish.isAvailable = true;
+    }
+    this.dishService.update(dish).subscribe();
   }
 
 }

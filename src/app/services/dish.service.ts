@@ -31,4 +31,8 @@ export class DishService {
     return this.http.get<Dish[]>('/api/dishes');
   }
 
+  update(dish: Dish): Observable<Dish> {
+    return this.http.put<Dish>('/api/dishes/' + dish.id, dish);
+  }
+
 }

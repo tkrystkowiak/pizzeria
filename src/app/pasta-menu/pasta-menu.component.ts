@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DishService} from '../services/dish.service';
 import {Dish} from '../models/Dish';
 import {CartService} from '../services/cart.service';
+import {Observable} from 'rxjs';
 
 
 @Component({
@@ -11,19 +12,14 @@ import {CartService} from '../services/cart.service';
 })
 export class PastaMenuComponent implements OnInit {
 
-  pastas: Dish[];
+  pastas$: Observable<Dish[]>;
 
   constructor(private dishService: DishService, private cartService: CartService) { }
 
   ngOnInit() {
-    this.getPastas();
+    this.pastas$ = this.dishService.getPastas();
   }
 
-  getPastas(): void {
-    this.dishService.getPastas()
-      .subscribe(pastas => this.pastas = pastas);
-    const pastasTest = this.pastas;
-  }
 
   addToCart(dish: Dish): void {
     this.cartService.addToCart(dish);

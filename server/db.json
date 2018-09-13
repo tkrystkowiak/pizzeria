@@ -17,25 +17,25 @@
       "price": "23.50"
     },
     {
+      "id": 3,
+      "name": "Spagetti Carbonara",
+      "isAvailable": true,
+      "description": "Sos carbonara",
+      "type": "pasta",
+      "price": "14"
+    },
+    {
       "id": 4,
       "name": "Spagetti Bolognese",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Sos boloński",
       "type": "pasta",
       "price": "14"
     },
     {
       "id": 5,
-      "name": "Spagetti Siciliana",
-      "isAvailable": true,
-      "description": "Sos boloński z szynką i kukurydzą",
-      "type": "pasta",
-      "price": "17.50"
-    },
-    {
-      "id": 5,
       "name": "Cola",
-      "isAvailable": false,
+      "isAvailable": true,
       "description": "Ol' good cola",
       "type": "drink",
       "price": "4"
@@ -47,6 +47,14 @@
       "description": "Cool and delicious",
       "type": "drink",
       "price": "7.50"
+    },
+    {
+      "id": 7,
+      "name": "Water",
+      "isAvailable": true,
+      "description": "Pure water from deep caves",
+      "type": "drink",
+      "price": "2.50"
     }
   ],
   "orders": [

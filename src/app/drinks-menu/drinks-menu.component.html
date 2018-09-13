@@ -1,23 +1,24 @@
 <div class="body">
-<div class="container">
-  <h2>Drinks</h2>
-  <table class="menu">
-    <colgroup>
-      <col class="id">
-      <col class="name">
-      <col class="description">
-      <col class="price">
-      <col class="plus">
-    </colgroup>
-    <tr *ngFor="let drink of drinks">
-
-      <td>{{drink.id}}</td>
-      <td>{{drink.name}}</td>
-      <td>{{drink.description}}</td>
-      <td>{{drink.price}} $</td>
-      <td><button (click)="addToCart(drink)">+</button></td>
-
-    </tr>
-  </table>
-</div>
+  <div class="container">
+    <h2>Drinks</h2>
+    <table class="menu" *ngIf="drinks$ | async as drinks">
+      <colgroup>
+        <col class="id">
+        <col class="name">
+        <col class="description">
+        <col class="price">
+        <col class="plus">
+      </colgroup>
+      <tr *ngFor="let drink of drinks">
+        <td>{{drink.id}}</td>
+        <td>{{drink.name}}</td>
+        <td>{{drink.description}}</td>
+        <td>{{drink.price}} $</td>
+        <td>
+          <span *ngIf="!drink.isAvailable">not available</span>
+          <button *ngIf="drink.isAvailable" (click)="addToCart(drink)">+</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>

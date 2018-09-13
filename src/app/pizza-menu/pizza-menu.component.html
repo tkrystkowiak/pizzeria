@@ -1,7 +1,7 @@
 <div class="body">
   <div class="container">
     <h2>Pizzas</h2>
-    <table class="menu">
+    <table class="menu" *ngIf="pizzas$ | async as pizzas">
       <colgroup>
         <col class="id">
         <col class="name">
@@ -15,7 +15,10 @@
         <td>{{pizza.name}}</td>
         <td>{{pizza.description}}</td>
         <td>{{pizza.price}} $</td>
-        <td><button (click)="addToCart(pizza)">+</button></td>
+        <td>
+          <span *ngIf="!pizza.isAvailable">not available</span>
+          <button *ngIf="pizza.isAvailable" (click)="addToCart(pizza)">+</button>
+        </td>
 
       </tr>
     </table>

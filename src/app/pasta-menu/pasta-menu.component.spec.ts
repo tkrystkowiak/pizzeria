@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PastaMenuComponent } from './pasta-menu.component';
+import {HttpClient, HttpHandler} from '@angular/common/http';
 
 describe('PastaMenuComponent', () => {
   let component: PastaMenuComponent;
@@ -8,7 +9,9 @@ describe('PastaMenuComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PastaMenuComponent ]
+      declarations: [ PastaMenuComponent ],
+      providers: [ HttpClient,
+      HttpHandler]
     })
     .compileComponents();
   }));

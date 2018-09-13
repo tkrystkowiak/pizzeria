@@ -10,6 +10,7 @@ import {DishListComponent} from './dish-list/dish-list.component';
 import {DishDetailComponent} from './dish-detail/dish-detail.component';
 import {OrderDetailComponent} from './order-detail/order-detail.component';
 import {OrderListComponent} from './order-list/order-list.component';
+import {RoleGuard} from './role-guard';
 
 const routes: Routes = [{path: 'pizzas', component: PizzaMenuComponent},
     {path: 'pastas', component: PastaMenuComponent},
@@ -17,10 +18,10 @@ const routes: Routes = [{path: 'pizzas', component: PizzaMenuComponent},
     {path: 'cart', component: CartComponent},
     {path: 'address', component: AddressComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'dishes', component: DishListComponent},
-    {path: 'dish-detail/:id', component: DishDetailComponent},
-    {path: 'orders', component: OrderListComponent},
-    {path: 'order-detail/:id', component: OrderDetailComponent}];
+    {path: 'dishes', component: DishListComponent, canActivate: [ RoleGuard]},
+    {path: 'dish-detail/:id', component: DishDetailComponent, canActivate: [ RoleGuard]},
+    {path: 'orders', component: OrderListComponent, canActivate: [ RoleGuard]},
+    {path: 'order-detail/:id', component: OrderDetailComponent, canActivate: [ RoleGuard]}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

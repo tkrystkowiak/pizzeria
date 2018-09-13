@@ -1,26 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DishService} from '../services/dish.service';
 import {Dish} from '../models/Dish';
 import {CartService} from '../services/cart.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-drinks-menu',
   templateUrl: './drinks-menu.component.html',
   styleUrls: ['./drinks-menu.component.scss']
 })
+
 export class DrinksMenuComponent implements OnInit {
 
-  drinks: Dish[];
+  drinks$: Observable<Dish[]>;
 
   constructor(private dishService: DishService, private cartService: CartService) { }
 
   ngOnInit() {
-    this.getDrinks();
-  }
-
-  getDrinks(): void {
-    this.dishService.getDrinks()
-      .subscribe(drinks => this.drinks = drinks);
+    this.drinks$ = this.dishService.getDrinks();
   }
 
   addToCart(dish: Dish): void {
