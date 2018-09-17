@@ -12,6 +12,7 @@ import {takeUntil} from 'rxjs/operators';
   templateUrl: './order-detail.component.html',
   styleUrls: ['./order-detail.component.scss']
 })
+
 export class OrderDetailComponent implements OnInit, OnDestroy {
 
   order: Order;

@@ -25,7 +25,6 @@ export class DishListComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-
   getDishes(): void {
     this.dishService.getDishes().subscribe(dishes => this.dishes = dishes);
   }

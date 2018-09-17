@@ -12,6 +12,7 @@ import {Observable} from 'rxjs';
 export class PizzaMenuComponent implements OnInit {
 
   pizzas$: Observable<Dish[]>;
+  pizzas: Dish[];
 
   constructor(
     private dishService: DishService,

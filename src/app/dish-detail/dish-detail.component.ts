@@ -4,6 +4,7 @@ import {DishService} from '../services/dish.service';
 import {ActivatedRoute} from '@angular/router';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
+import {Address} from '../models/Address';
 
 @Component({
   selector: 'app-dish-detail',
@@ -18,7 +19,7 @@ export class DishDetailComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private dishService: DishService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.getDish();

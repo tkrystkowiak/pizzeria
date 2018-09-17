@@ -55,6 +55,14 @@
       "description": "Pure water from deep caves",
       "type": "drink",
       "price": "2.50"
+    },
+    {
+      "name": "Pizza la parma",
+      "description": "rukola, tomatoes",
+      "type": "pizza",
+      "price": "18",
+      "isAvailable": false,
+      "id": 8
     }
   ],
   "orders": [

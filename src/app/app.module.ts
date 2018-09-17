@@ -18,6 +18,7 @@ import {DishListComponent} from './dish-list/dish-list.component';
 import {OrderListComponent} from './order-list/order-list.component';
 import {OrderDetailComponent} from './order-detail/order-detail.component';
 import {RoleGuard} from './role-guard';
+import { DishFormComponent } from './dish-form/dish-form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {RoleGuard} from './role-guard';
     DishDetailComponent,
     DishListComponent,
     OrderListComponent,
-    OrderDetailComponent
+    OrderDetailComponent,
+    DishFormComponent
   ],
   imports: [
     BrowserModule,

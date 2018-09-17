@@ -1,7 +1,14 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Dish} from '../models/Dish';
+import {Order} from '../models/Order';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +40,10 @@ export class DishService {
 
   update(dish: Dish): Observable<Dish> {
     return this.http.put<Dish>('/api/dishes/' + dish.id, dish);
+  }
+
+  save(dish: Dish): Observable<Dish> {
+    return this.http.post<Dish>('/api/dishes', dish, httpOptions);
   }
 
 }

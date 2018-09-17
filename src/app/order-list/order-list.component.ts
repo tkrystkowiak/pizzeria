@@ -9,6 +9,7 @@ import {takeUntil} from 'rxjs/operators';
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.scss']
 })
+
 export class OrderListComponent implements OnInit, OnDestroy {
 
   orders: Order[];

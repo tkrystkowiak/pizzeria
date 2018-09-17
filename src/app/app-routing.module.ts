@@ -11,12 +11,14 @@ import {DishDetailComponent} from './dish-detail/dish-detail.component';
 import {OrderDetailComponent} from './order-detail/order-detail.component';
 import {OrderListComponent} from './order-list/order-list.component';
 import {RoleGuard} from './role-guard';
+import {DishFormComponent} from './dish-form/dish-form.component';
 
 const routes: Routes = [{path: 'pizzas', component: PizzaMenuComponent},
     {path: 'pastas', component: PastaMenuComponent},
     {path: 'drinks', component: DrinksMenuComponent},
     {path: 'cart', component: CartComponent},
     {path: 'address', component: AddressComponent},
+    {path: 'dish-form', component: DishFormComponent},
     {path: 'login', component: LoginComponent},
     {path: 'dishes', component: DishListComponent, canActivate: [ RoleGuard]},
     {path: 'dish-detail/:id', component: DishDetailComponent, canActivate: [ RoleGuard]},
