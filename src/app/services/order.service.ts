@@ -15,6 +15,8 @@ const httpOptions = {
 })
 export class OrderService {
 
+  statusList = ['In preparation', 'In delivery', 'Delivered', 'Cancelled'];
+
   constructor(private http: HttpClient) {
 
   }
@@ -35,4 +37,11 @@ export class OrderService {
     return this.http.delete<Order>('/api/orders/' + id);
   }
 
+  getStatusList(): string[] {
+    return this.statusList;
+  }
+
+  updateOne(order: Order): Observable<Order> {
+    return this.http.put<Order>('/api/orders/' + order.id, order, httpOptions);
+  }
 }

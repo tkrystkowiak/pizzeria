@@ -1,9 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrderListComponent } from './order-list.component';
-import {ActivatedRoute, RouterModule} from '@angular/router';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 import {RouterTestingModule} from '@angular/router/testing';
+import {DishService} from '../services/dish.service';
+import {OrderService} from '../services/order.service';
+import {of} from 'rxjs';
 
 describe('OrderListComponent', () => {
   let component: OrderListComponent;
@@ -14,7 +16,8 @@ describe('OrderListComponent', () => {
       imports: [RouterTestingModule],
       declarations: [ OrderListComponent ],
       providers: [ HttpClient,
-        HttpHandler]
+        HttpHandler,
+        OrderService]
     })
     .compileComponents();
   }));
@@ -28,4 +31,13 @@ describe('OrderListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should call orderService', () => {
+    const orderService = TestBed.get(OrderService);
+    const spyOrderService = spyOn(orderService, 'getAll');
+    spyOrderService.and.returnValue(of(null));
+    component.ngOnInit();
+    expect(spyOrderService).toHaveBeenCalled();
+  });
+
 });

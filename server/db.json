@@ -60,37 +60,34 @@
   "orders": [
     {
       "address": {
-        "firstName": "Stephen",
-        "lastName": "Hawking",
-        "city": "London",
+        "firstName": "Albert",
+        "lastName": "Jones",
+        "city": "Atlanta",
         "street": "Baker Street",
-        "apartment": "35b",
-        "floor": "2"
+        "apartment": "39",
+        "floor": "4"
       },
-      "date": 1536670746520,
+      "date": 1536915787076,
       "dishes": [
-        5,
-        4
+        3,
+        4,
+        5
       ],
+      "status": "In preparation",
       "id": 1
     },
     {
       "address": {
-        "firstName": "Denzel",
-        "lastName": "Washington",
-        "city": "Wrocław",
-        "street": "Poznańska",
-        "apartment": "43",
-        "floor": "3"
+        "firstName": "Albert",
+        "lastName": "Einstein",
+        "city": "Atlanta",
+        "street": "Bad",
+        "apartment": "39",
+        "floor": "4"
       },
-      "date": 1536738163050,
-      "dishes": [
-        5,
-        5,
-        6,
-        5,
-        4
-      ],
+      "date": 1536928761894,
+      "dishes": [],
+      "status": "In preparation",
       "id": 2
     }
   ],

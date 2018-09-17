@@ -14,7 +14,10 @@ export class DrinksMenuComponent implements OnInit {
 
   drinks$: Observable<Dish[]>;
 
-  constructor(private dishService: DishService, private cartService: CartService) { }
+  constructor(
+    private dishService: DishService,
+    private cartService: CartService
+  ) { }
 
   ngOnInit() {
     this.drinks$ = this.dishService.getDrinks();

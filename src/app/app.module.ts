@@ -10,13 +10,13 @@ import {PizzaMenuComponent} from './pizza-menu/pizza-menu.component';
 import {PastaMenuComponent} from './pasta-menu/pasta-menu.component';
 import {DrinksMenuComponent} from './drinks-menu/drinks-menu.component';
 import {HttpClientModule} from '@angular/common/http';
-import { AddressComponent } from './address/address.component';
-import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
-import { DishDetailComponent } from './dish-detail/dish-detail.component';
-import { DishListComponent } from './dish-list/dish-list.component';
-import { OrderListComponent } from './order-list/order-list.component';
-import { OrderDetailComponent } from './order-detail/order-detail.component';
+import {AddressComponent} from './address/address.component';
+import {LoginComponent} from './login/login.component';
+import {FormsModule} from '@angular/forms';
+import {DishDetailComponent} from './dish-detail/dish-detail.component';
+import {DishListComponent} from './dish-list/dish-list.component';
+import {OrderListComponent} from './order-list/order-list.component';
+import {OrderDetailComponent} from './order-detail/order-detail.component';
 import {RoleGuard} from './role-guard';
 
 @NgModule({

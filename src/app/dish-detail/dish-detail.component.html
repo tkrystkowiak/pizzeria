@@ -1,15 +1,14 @@
+<div class="body">
+  <div class="container">
 <div *ngIf="dish">
   <table>
-    <tr>
-      <td>
-        <h2>{{dish.name | uppercase}} Details</h2>
-        <div><span>id: </span>{{dish.id}}</div>
-        <div><span>name: </span>{{dish.name}}</div>
-        <div><span>price: </span>{{dish.price}}</div>
-      </td>
-      <td>
-
-      </td>
-    </tr>
+    <h2>{{dish.name | uppercase}}</h2>
+    <tr><td>id: {{dish.id}}</td></tr>
+    <tr><td>name: {{dish.name}}</td></tr>
+    <tr><td>description: {{dish.description}}</td></tr>
+    <tr><td>type: {{dish.type}}</td></tr>
+    <tr><td>price: {{dish.price}}</td></tr>
   </table>
+</div>
+  </div>
 </div>

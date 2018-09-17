@@ -13,9 +13,9 @@
         <td >{{dish.id}}</td>
         <td >{{dish.name}}</td>
         <td >{{dish.price}} $</td>
-        <td ><button (click)="remove(dish)">-</button></td>
+        <td ><button class="plus_button" (click)="remove(dish)">-</button></td>
       </tr>
     </table>
-    <button class="checkout" routerLink="/address">Checkout</button>
+    <button class="checkout" [disabled]="dishes.length===0" routerLink="/address">Checkout</button>
   </div>
 </div>

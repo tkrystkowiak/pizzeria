@@ -1,6 +1,7 @@
 .body{
   display:flex;
   justify-content: center;
+  padding: 10px;
 }
 
 h2{
@@ -8,28 +9,18 @@ h2{
 }
 
 table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   min-width: 600px;
   width: 100%;
 }
 tr, td{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #70C1B3;
   padding: 15px;
   text-align: left;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex: 0 0 600px;
-  max-width: 600px;
-  background-color: #E0DFD5;
 }
 
 .id {
   width: 5%;
-
 }
 
 .name{
@@ -47,3 +38,5 @@ tr, td{
 .plus{
   width: 5%;
 }
+
+

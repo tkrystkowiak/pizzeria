@@ -3,11 +3,17 @@
   <button [hidden]="loginService.isAuthenticated" routerLink="/login">login</button>
   <button [hidden]="!loginService.isAuthenticated" (click)="loginService.logout()" routerLink="/">logout</button>
 </div>
+<script>
+  function highlight(evt) {
+    evt.currentTarget.className += " red";
+  }
+</script>
 <nav class="tab">
-  <button [hidden]="loginService.isAuthenticated" routerLink="/pizzas">Pizzas</button>
-  <button [hidden]="loginService.isAuthenticated" routerLink="/pastas">Pastas</button>
-  <button [hidden]="loginService.isAuthenticated" routerLink="/drinks">Drinks</button>
-  <button [hidden]="!loginService.isAuthenticated" routerLink="/dishes">Dishes</button>
-  <button [hidden]="!loginService.isAuthenticated" routerLink="/orders">Orders</button>
+  <button class="regular" [hidden]="loginService.isAuthenticated" (click)="highlight(event)" routerLink="/pizzas">Pizzas</button>
+  <button class="regular" [hidden]="loginService.isAuthenticated" routerLink="/pastas">Pastas</button>
+  <button class="regular" [hidden]="loginService.isAuthenticated" routerLink="/drinks">Drinks</button>
+  <button class="regular" [hidden]="!loginService.isAuthenticated" routerLink="/dishes">Dishes</button>
+  <button class="regular" [hidden]="!loginService.isAuthenticated" routerLink="/orders">Orders</button>
 </nav>
+
 <router-outlet></router-outlet>

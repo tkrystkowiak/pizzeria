@@ -13,7 +13,10 @@ export class PizzaMenuComponent implements OnInit {
 
   pizzas$: Observable<Dish[]>;
 
-  constructor(private dishService: DishService, private cartService: CartService) { }
+  constructor(
+    private dishService: DishService,
+    private cartService: CartService
+  ) { }
 
   ngOnInit() {
     this.pizzas$ = this.dishService.getPizzas();
@@ -22,6 +25,7 @@ export class PizzaMenuComponent implements OnInit {
   addToCart(dish: Dish): void {
     this.cartService.addToCart(dish);
   }
+
 }
 
 

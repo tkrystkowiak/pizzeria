@@ -18,7 +18,7 @@
         <td>{{pasta.price}} $</td>
         <td>
           <span *ngIf="!pasta.isAvailable">not available</span>
-          <button *ngIf="pasta.isAvailable" (click)="addToCart(pasta)">+</button>
+          <button class="plus_button" *ngIf="pasta.isAvailable" (click)="addToCart(pasta)">+</button>
         </td>
       </tr>
     </table>

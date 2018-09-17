@@ -10,4 +10,5 @@ export class AppComponent {
   title = 'pizzeria';
 
   constructor(public loginService: LoginService) {}
+
 }

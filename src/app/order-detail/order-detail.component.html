@@ -1,36 +1,47 @@
 <div class="body">
   <div class="container">
-    <table class="display">
-      <tr>
-        <td class="address">
-          <div *ngIf="order">
-            <p>Name: {{order.address.firstName}} {{order.address.lastName}}</p>
-            <p>City: {{order.address.city}}</p>
-            <p>Street: {{order.address.lastName}}</p>
-            <p>Apartment: {{order.address.apartment}}</p>
-            <p>Floor: {{order.address.floor}}</p>
-          </div>
-        </td>
-        <td class="dishes">
-          <table class="menu">
-            <colgroup>
-              <col class="id">
-              <col class="name">
-              <col class="description">
-              <col class="price">
-            </colgroup>
-            <tr *ngFor="let dish of dishes">
+  <div class="display">
+    <div class="top_half">
+    <div class="address" *ngIf="order">
+      <h3>Address</h3>
+      <p>Name: {{order.address.firstName}} {{order.address.lastName}}</p>
+      <p>City: {{order.address.city}}</p>
+      <p>Street: {{order.address.lastName}}</p>
+      <p>Apartment: {{order.address.apartment}}</p>
+      <p>Floor: {{order.address.floor}}</p>
+    </div>
+    <div class="status_delete">
+      <span>Status: </span>
+      <select *ngIf="order" id="statusForm" class="form-control" [(ngModel)]="order.status" (change)="updateOrder()">
 
-              <td>{{dish.id}}</td>
-              <td>{{dish.name}}</td>
-              <td>{{dish.description}}</td>
-              <td>{{dish.price}} $</td>
+        <option *ngFor="let status of statusList">{{status}}
+        </option>
+      </select>
+      <button class="delete" (click)="deleteOrder()" routerLink="/orders">Delete</button>
+    </div>
+    </div>
 
-            </tr>
-          </table>
-        </td>
+
+
+    <table class="dishes">
+      <h3>Dishes</h3>
+      <colgroup>
+        <col class="id">
+        <col class="name">
+        <col class="description">
+        <col class="price">
+      </colgroup>
+      <tr *ngFor="let dish of dishes">
+
+        <td>{{dish.id}}</td>
+        <td>{{dish.name}}</td>
+        <td>{{dish.description}}</td>
+        <td>{{dish.price}} $</td>
+
       </tr>
     </table>
-    <button (click)="deleteOrder()" routerLink="/orders/"></button>
+
+
+  </div>
   </div>
 </div>

@@ -2,7 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrderDetailComponent } from './order-detail.component';
 import {RouterTestingModule} from '@angular/router/testing';
-import {HttpClient, HttpHandler} from '@angular/common/http';
+import {OrderService} from '../services/order.service';
+import {of} from 'rxjs';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {FormsModule} from '@angular/forms';
 
 describe('OrderDetailComponent', () => {
   let component: OrderDetailComponent;
@@ -10,10 +13,11 @@ describe('OrderDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule,
+      HttpClientTestingModule,
+      FormsModule],
       declarations: [ OrderDetailComponent ],
-      providers: [ HttpClient,
-        HttpHandler]
+      providers: [OrderService]
     })
     .compileComponents();
   }));
@@ -26,5 +30,13 @@ describe('OrderDetailComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call orderService getOrder method', () => {
+    const orderService = TestBed.get(OrderService);
+    const spyOrderService = spyOn(orderService, 'getOne');
+    spyOrderService.and.returnValue(of(null));
+    component.ngOnInit();
+    expect(spyOrderService).toHaveBeenCalled();
   });
 });

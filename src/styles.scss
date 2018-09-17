@@ -1,5 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 //@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 body{
-  background-color: #E8E9EB;
+  background-color: #F3FFBD;
+  font-family: arial, sans-serif;
+}
+
+.plus_button{
+  background-color: #70C1B3;
+  border: 2px solid #247BA0;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+.plus_button:hover{
+  background-color: #FF1654;
+
+}
+
+.plus_button:active{
+  border: 2px outset #247BA0;
+}
+
+.body{
+  display:flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0 0 600px;
+  max-width: 600px;
+  background-color: #B2DBBF;
+  border: 2px solid #70C1B3;
+  border-radius: 5px;
 }

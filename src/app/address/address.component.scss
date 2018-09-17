@@ -1,14 +1,9 @@
-.body{
-  display: flex;
-  justify-content: center;
+h2{
+  text-align: center;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 500px;
-
+.form-group {
+  padding: 5px;
 }
 
 .ng-valid[required], .ng-valid.required  {
@@ -36,8 +31,6 @@ input[type=text]{
 }
 
 button[type=submit] {
-  //background-color: #4CAF50;
-  //color: white;
   padding: 12px 20px;
   border: none;
   margin-top: 30px;

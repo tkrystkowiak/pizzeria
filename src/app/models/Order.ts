@@ -5,4 +5,5 @@ export class Order {
   date: number;
   address: Address;
   dishes: number[];
+  status: string;
 }
