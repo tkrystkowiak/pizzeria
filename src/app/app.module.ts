@@ -16,7 +16,7 @@ import {FormsModule} from '@angular/forms';
 import {DishDetailComponent} from './dish-detail/dish-detail.component';
 import {DishListComponent} from './dish-list/dish-list.component';
 import {OrderListComponent} from './order-list/order-list.component';
-import {OrderDetailComponent} from './order-detail/order-detail.component';
+import {OrderDetailComponent} from './order-list/order-detail/order-detail.component';
 import {RoleGuard} from './role-guard';
 import { DishAddFormComponent } from './dish-detail/dish-add-form/dish-add-form.component';
 import { DishModifyFormComponent } from './dish-detail/dish-modify-form/dish-modify-form.component';

@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Order} from '../models/Order';
+import {Order} from '../../models/Order';
 import {ActivatedRoute} from '@angular/router';
-import {OrderService} from '../services/order.service';
-import {DishService} from '../services/dish.service';
-import {Dish} from '../models/Dish';
+import {OrderService} from '../../services/order.service';
+import {DishService} from '../../services/dish.service';
+import {Dish} from '../../models/Dish';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 

@@ -2,11 +2,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrderDetailComponent } from './order-detail.component';
 import {RouterTestingModule} from '@angular/router/testing';
-import {OrderService} from '../services/order.service';
+import {OrderService} from '../../services/order.service';
 import {of} from 'rxjs';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {FormsModule} from '@angular/forms';
-import {Order} from '../models/Order';
+import {Order} from '../../models/Order';
 
 describe('OrderDetailComponent', () => {
   let component: OrderDetailComponent;

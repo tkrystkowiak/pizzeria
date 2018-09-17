@@ -8,7 +8,7 @@ import {AddressComponent} from './address/address.component';
 import {LoginComponent} from './login/login.component';
 import {DishListComponent} from './dish-list/dish-list.component';
 import {DishDetailComponent} from './dish-detail/dish-detail.component';
-import {OrderDetailComponent} from './order-detail/order-detail.component';
+import {OrderDetailComponent} from './order-list/order-detail/order-detail.component';
 import {OrderListComponent} from './order-list/order-list.component';
 import {RoleGuard} from './role-guard';
 import {DishAddFormComponent} from './dish-detail/dish-add-form/dish-add-form.component';
