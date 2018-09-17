@@ -61,7 +61,7 @@
       "description": "rukola, tomatoes",
       "type": "pizza",
       "price": "18",
-      "isAvailable": false,
+      "isAvailable": true,
       "id": 8
     }
   ],

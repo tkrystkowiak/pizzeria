@@ -8,9 +8,9 @@
         <col class="price">
         <col class="available">
       </colgroup>
-      <tr *ngFor="let dish of dishes" routerLink="/dish-detail/{{dish.id}}">
+      <tr *ngFor="let dish of dishes">
         <td>{{dish.id}}</td>
-        <td>{{dish.name}}</td>
+        <td routerLink="/dish-detail/{{dish.id}}">{{dish.name}}</td>
         <td>{{dish.price}} $</td>
         <td><label><input id="check" type="checkbox" [checked]=dish.isAvailable (change)="modifyAvailability(dish)">Available</label></td>
       </tr>

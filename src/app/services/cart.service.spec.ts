@@ -42,4 +42,23 @@ describe('CartService', () => {
     expect(actualCart.length).toEqual(1);
   }));
 
+  it('should remove one dish from the cart', inject([CartService], (service: CartService) => {
+
+    const sampleDish: Dish = {
+      id : 1,
+      name : 'pizza',
+      price: 15,
+      type: 'pizza',
+      description: 'tasty',
+      isAvailable: true
+    };
+    let actualCart: Dish[];
+    service.addToCart(sampleDish);
+    actualCart = service.getCart();
+    const beforeRemoval = actualCart.length;
+    service.remove(sampleDish);
+    const afterRemoval = actualCart.length;
+    expect(beforeRemoval).toEqual(afterRemoval+1);
+  }));
+
 });
