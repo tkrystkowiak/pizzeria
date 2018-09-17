@@ -1,24 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DishFormComponent } from './dish-form.component';
+import { DishAddFormComponent } from './dish-add-form.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 
-describe('DishFormComponent', () => {
-  let component: DishFormComponent;
-  let fixture: ComponentFixture<DishFormComponent>;
+describe('DishAddFormComponent', () => {
+  let component: DishAddFormComponent;
+  let fixture: ComponentFixture<DishAddFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ FormsModule,
         HttpClientTestingModule],
-      declarations: [ DishFormComponent ]
+      declarations: [ DishAddFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DishFormComponent);
+    fixture = TestBed.createComponent(DishAddFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -26,4 +26,5 @@ describe('DishFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

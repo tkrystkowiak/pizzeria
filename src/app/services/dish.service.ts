@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Dish} from '../models/Dish';
-import {Order} from '../models/Order';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -46,4 +45,7 @@ export class DishService {
     return this.http.post<Dish>('/api/dishes', dish, httpOptions);
   }
 
+  deleteOne(id: number): Observable<Dish> {
+    return this.http.delete<Dish>('/api/dishes/' + id);
+  }
 }

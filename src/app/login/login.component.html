@@ -11,8 +11,9 @@
         <label for="password">Password</label>
         <input type="text" id="password" required [(ngModel)]="password" name="password">
       </div>
-
+      <div class="submit_container">
       <button type="submit" [disabled]="!loginForm.form.valid">Log in</button>
+      </div>
     </form>
   </div>
 </div>

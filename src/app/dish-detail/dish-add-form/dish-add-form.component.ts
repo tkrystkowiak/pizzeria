@@ -1,16 +1,16 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Dish} from '../models/Dish';
+import {Dish} from '../../models/Dish';
 import {Subject} from 'rxjs';
-import {Order} from '../models/Order';
+import {Order} from '../../models/Order';
 import {takeUntil} from 'rxjs/operators';
-import {DishService} from '../services/dish.service';
+import {DishService} from '../../services/dish.service';
 
 @Component({
   selector: 'app-dish-form',
-  templateUrl: './dish-form.component.html',
-  styleUrls: ['./dish-form.component.scss']
+  templateUrl: './dish-add-form.component.html',
+  styleUrls: ['./dish-add-form.component.scss']
 })
-export class DishFormComponent implements OnInit, OnDestroy {
+export class DishAddFormComponent implements OnInit, OnDestroy {
 
   model: Dish;
   submitted = false;

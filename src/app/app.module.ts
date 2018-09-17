@@ -18,7 +18,8 @@ import {DishListComponent} from './dish-list/dish-list.component';
 import {OrderListComponent} from './order-list/order-list.component';
 import {OrderDetailComponent} from './order-detail/order-detail.component';
 import {RoleGuard} from './role-guard';
-import { DishFormComponent } from './dish-form/dish-form.component';
+import { DishAddFormComponent } from './dish-detail/dish-add-form/dish-add-form.component';
+import { DishModifyFormComponent } from './dish-detail/dish-modify-form/dish-modify-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { DishFormComponent } from './dish-form/dish-form.component';
     DishListComponent,
     OrderListComponent,
     OrderDetailComponent,
-    DishFormComponent
+    DishAddFormComponent,
+    DishModifyFormComponent
   ],
   imports: [
     BrowserModule,

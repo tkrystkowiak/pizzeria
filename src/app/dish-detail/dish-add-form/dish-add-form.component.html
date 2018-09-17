@@ -1,0 +1,32 @@
+<div class="body">
+  <div class="container" >
+    <h2 [hidden]="submitted">Dish Creation</h2>
+    <h2 [hidden]="!submitted">Dish successfully saved</h2>
+    <form [hidden]="submitted" (ngSubmit)="onSubmit()" #addForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" required [(ngModel)]="model.name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" required [(ngModel)]="model.description" name="description">
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input type="text" id="type" required [(ngModel)]="model.type" name="type">
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" id="price" required [(ngModel)]="model.price" name="price">
+      </div>
+
+      <div class="submit_container">
+      <button type="submit" [disabled]="!addForm.form.valid">Save dish</button>
+      </div>
+
+    </form>
+  </div>
+</div>

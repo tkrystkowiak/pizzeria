@@ -1,10 +1,9 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Dish} from '../models/Dish';
 import {DishService} from '../services/dish.service';
 import {ActivatedRoute} from '@angular/router';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
-import {Address} from '../models/Address';
 
 @Component({
   selector: 'app-dish-detail',
@@ -14,6 +13,7 @@ import {Address} from '../models/Address';
 export class DishDetailComponent implements OnInit, OnDestroy {
 
   dish: Dish;
+  deleted = false;
   private readonly destroy$ = new Subject();
 
   constructor(
@@ -34,6 +34,11 @@ export class DishDetailComponent implements OnInit, OnDestroy {
     const id = +this.route.snapshot.paramMap.get('id');
     this.dishService.getDish(id).pipe(takeUntil(this.destroy$))
       .subscribe(dish => this.dish = dish);
+  }
+
+  deleteDish(id: number) {
+    this.deleted = true;
+    this.dishService.deleteOne(id).pipe(takeUntil(this.destroy$)).subscribe();
   }
 
 }

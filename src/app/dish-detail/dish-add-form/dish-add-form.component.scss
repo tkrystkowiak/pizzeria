@@ -31,9 +31,19 @@ input[type=text]{
 }
 
 button[type=submit] {
+  align-self: end;
+  max-width: fit-content;
   padding: 12px 20px;
   border: none;
   margin-top: 30px;
-  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #70C1B3;
+  border: 2px solid #247BA0;
+  border-radius: 10px;
   cursor: pointer;
+}
+
+.submit_container{
+  display: flex;
+  justify-content: center;
 }

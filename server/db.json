@@ -11,10 +11,10 @@
     {
       "id": 2,
       "name": "Pizza Funghi",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
-      "price": "23.50"
+      "price": "24.50"
     },
     {
       "id": 3,
@@ -55,14 +55,6 @@
       "description": "Pure water from deep caves",
       "type": "drink",
       "price": "2.50"
-    },
-    {
-      "name": "Pizza la parma",
-      "description": "rukola, tomatoes",
-      "type": "pizza",
-      "price": "18",
-      "isAvailable": true,
-      "id": 8
     }
   ],
   "orders": [
@@ -81,7 +73,7 @@
         4,
         5
       ],
-      "status": "In preparation",
+      "status": "Delivered",
       "id": 1
     },
     {

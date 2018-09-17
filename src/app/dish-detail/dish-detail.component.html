@@ -1,14 +1,29 @@
 <div class="body">
   <div class="container">
-<div *ngIf="dish">
-  <table>
-    <h2>{{dish.name | uppercase}}</h2>
-    <tr><td>id: {{dish.id}}</td></tr>
-    <tr><td>name: {{dish.name}}</td></tr>
-    <tr><td>description: {{dish.description}}</td></tr>
-    <tr><td>type: {{dish.type}}</td></tr>
-    <tr><td>price: {{dish.price}}</td></tr>
-  </table>
-</div>
+    <h2 [hidden]="!deleted">Dish deleted</h2>
+    <div [hidden]="deleted" *ngIf="dish">
+      <table>
+        <h2>{{dish.name | uppercase}}</h2>
+        <tr>
+          <td>id: {{dish.id}}</td>
+        </tr>
+        <tr>
+          <td>name: {{dish.name}}</td>
+        </tr>
+        <tr>
+          <td>description: {{dish.description}}</td>
+        </tr>
+        <tr>
+          <td>type: {{dish.type}}</td>
+        </tr>
+        <tr>
+          <td>price: {{dish.price}}</td>
+        </tr>
+      </table>
+      <div class="submit_container">
+        <button routerLink="/dish-modify-form/{{dish.id}}">Modify</button>
+        <button (click)="deleteDish(dish.id)">Delete</button>
+      </div>
+    </div>
   </div>
 </div>

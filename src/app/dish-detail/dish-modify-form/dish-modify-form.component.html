@@ -1,7 +1,7 @@
 <div class="body">
   <div class="container" >
     <h2 [hidden]="submitted">Dish Creation</h2>
-    <h2 [hidden]="!submitted">Dish successfully saved</h2>
+    <h2 [hidden]="!submitted">Dish successfully modified</h2>
     <form [hidden]="submitted" (ngSubmit)="onSubmit()" #addressForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
@@ -23,7 +23,9 @@
         <input type="text" id="price" required [(ngModel)]="model.price" name="price">
       </div>
 
-      <button type="submit" [disabled]="!addressForm.form.valid">Save dish</button>
+      <div class="submit_container">
+        <button type="submit" [disabled]="!addressForm.form.valid">Update dish</button>
+      </div>
 
     </form>
   </div>
