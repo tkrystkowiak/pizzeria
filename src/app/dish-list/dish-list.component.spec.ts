@@ -5,6 +5,10 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 
+import {DishService} from '../services/dish.service';
+import {Dish} from '../models/Dish';
+import {of} from 'rxjs';
+
 describe('DishListComponent', () => {
   let component: DishListComponent;
   let fixture: ComponentFixture<DishListComponent>;
@@ -15,7 +19,8 @@ describe('DishListComponent', () => {
         HttpClientTestingModule,
         RouterTestingModule
       ],
-      declarations: [ DishListComponent ]
+      declarations: [ DishListComponent],
+      providers: [ DishService ]
     })
     .compileComponents();
   }));
@@ -28,5 +33,21 @@ describe('DishListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('it should modify availability and call dishService update', () => {
+    const sampleDish: Dish = {
+      id : 1,
+      name : 'pizza',
+      price: 15,
+      type: 'pizza',
+      description: 'tasty',
+      isAvailable: false
+    };
+    const dishService = TestBed.get(DishService);
+    const spyDishService = spyOn(dishService, 'update');
+    spyDishService.and.returnValue(of(sampleDish));
+    component.modifyAvailability(sampleDish);
+    expect(sampleDish.isAvailable).toEqual(true);
   });
 });
