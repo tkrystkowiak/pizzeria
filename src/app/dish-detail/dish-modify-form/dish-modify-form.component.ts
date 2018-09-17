@@ -40,7 +40,7 @@ export class DishModifyFormComponent implements OnInit, OnDestroy {
 
   onSubmit() {
     this.submitted = true;
-    this.model.isAvailable = false;
+    this.model.isAvailable = true;
     this.dishService.update(this.model).pipe(takeUntil(this.destroy$)).subscribe();
   }
 
